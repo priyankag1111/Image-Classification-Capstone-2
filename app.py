@@ -5,11 +5,14 @@ from PIL import Image
 
 st.title("Clothing Classification App")
 
-@st.cache_resource
-def load_model():
-    return tf.keras.models.load_model("clothing_classifier.keras", compile=False)
+import streamlit as st
+import tensorflow as tf
 
-model = load_model("clothing_classifier.keras")
+st.write("Loading model...")
+
+model = tf.keras.models.load_model("clothing_classifier.keras")
+
+st.write("Model loaded successfully")
 
 CLASS_NAMES = [
     "dress",
