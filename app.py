@@ -9,7 +9,7 @@ st.title("Clothing Classification App")
 def load_model():
     return tf.keras.models.load_model("clothing_classifier.keras", compile=False)
 
-model = load_model()
+model = load_model("clothing_classifier.keras")
 
 CLASS_NAMES = [
     "dress",
