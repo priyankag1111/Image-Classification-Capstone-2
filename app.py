@@ -3,6 +3,16 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
+import os
+
+st.write("Current files:", os.listdir())
+
+try:
+    model = tf.keras.models.load_model("clothing_classifier.keras", compile=False)
+    st.write("Model loaded successfully")
+except Exception as e:
+    st.error("Model loading failed")
+    st.exception(e)
 st.title("Clothing Classification App")
 
 import streamlit as st
