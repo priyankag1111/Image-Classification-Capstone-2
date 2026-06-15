@@ -56,7 +56,7 @@ if uploaded_file:
         st.info(f"Confidence: {confidence:.2%}")
 """
 
-with open("app.py", "w") as f:
+with open("app_py.py", "w") as f:
     f.write(app_code)
 
 print("app.py created")
